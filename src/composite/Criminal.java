@@ -13,6 +13,10 @@ public class Criminal implements Movie{
         this.name = name;
     }
 
+    public Criminal(){
+
+    }
+
     @Override
     public void addMovie(Movie movie) {
         this.criminalMovies.add(movie);
@@ -33,13 +37,7 @@ public class Criminal implements Movie{
         return this.GENRE;
     }
 
-    @Override
-    public void printMovie() {
-        System.out.println("Movie: " + this.name + " Genre: " + this.GENRE);
-        for (Movie movie: this.criminalMovies) {
-            movie.printMovie();
-        }
+    public void printMovie(){
+        MovieOption.printCatalog(criminalMovies);
     }
-
-    
 }
