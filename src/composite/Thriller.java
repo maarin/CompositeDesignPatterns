@@ -3,28 +3,25 @@ package composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Criminal implements Movie{
-    private final String GENRE = "Criminal";
-
+public class Thriller implements Movie {
+    private final String GENRE = "Thriller";
     private String name;
-    List<Movie> criminalMovies = new  ArrayList<Movie>();
+    List<Movie> thrillerMovies = new ArrayList<>();
 
-    public Criminal(String name){
+    public Thriller (){}
+
+    public Thriller(String name){
         this.name = name;
-    }
-
-    public Criminal(){
-
     }
 
     @Override
     public void addMovie(Movie movie) {
-        this.criminalMovies.add(movie);
+        this.thrillerMovies.add(movie);
     }
 
     @Override
     public void removeMovie(Movie movie) {
-        this.criminalMovies.remove(movie);
+        this.thrillerMovies.remove(movie);
     }
 
     @Override
@@ -42,7 +39,8 @@ public class Criminal implements Movie{
         return this.GENRE;
     }
 
-    public void printMovie(){
-        MovieOption.printCatalog(criminalMovies);
+    @Override
+    public void printMovie() {
+        MovieOption.printCatalog(thrillerMovies);
     }
 }

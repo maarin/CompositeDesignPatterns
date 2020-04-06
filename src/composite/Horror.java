@@ -3,22 +3,25 @@ package composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyMovies implements Movie {
+public class Horror implements Movie {
+    private final String GENRE = "Horror";
     private String name;
-    List<Movie> myMovies = new ArrayList<Movie>();
+    List<Movie> horrorMovies = new ArrayList<Movie>();
 
-    public void setName(String name) {
+    public Horror(){}
+
+    public Horror(String name){
         this.name = name;
     }
 
     @Override
     public void addMovie(Movie movie) {
-        this.myMovies.add(movie);
+        horrorMovies.add(movie);
     }
 
     @Override
     public void removeMovie(Movie movie) {
-        this.myMovies.remove(movie);
+        horrorMovies.remove(movie);
     }
 
     @Override
@@ -26,15 +29,18 @@ public class MyMovies implements Movie {
         return this.name;
     }
 
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public String getGenre() {
-        return null;
+        return this.GENRE;
     }
 
     @Override
     public void printMovie() {
-        System.out.println("-----Favourite-----");
-        MovieOption.printCatalog(myMovies);
+        MovieOption.printCatalog(horrorMovies);
     }
 }

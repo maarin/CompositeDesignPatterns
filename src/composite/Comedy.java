@@ -31,6 +31,11 @@ public class Comedy implements Movie {
     }
 
     @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public String getGenre() {
         return this.GENRE;
     }
