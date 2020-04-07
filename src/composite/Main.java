@@ -42,12 +42,10 @@ public class Main {
 
 
         myCatalog.addMovie(prisoners);
-       // MovieOption.addFavouriteMovie(criminalCatalog, castle.getName(), myCatalog);
-        allMoviesCatalog.printAddedMovie(allMoviesCatalog.getName());
 
-        //criminalCatalog.printMovie();
-       // comedyCatalog.printMovie();
-       // myCatalog.printMovie();
+        criminalCatalog.printMovie();
+       comedyCatalog.printMovie();
+       myCatalog.printMovie();
 
     }
 }

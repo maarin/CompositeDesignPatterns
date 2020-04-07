@@ -38,8 +38,5 @@ public class AllMovies implements Movie {
     public void printMovie() {
         MovieOption.printCatalog(allMoviesList);
     }
-
-    public void printAddedMovie(String name){
-        MovieOption.searchByName(this.name, allMoviesList);
-    }
+    
 }
